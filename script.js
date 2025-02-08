@@ -37,29 +37,38 @@ async function updateTheDom() {
   display.textContent = `${address}`
   display.style.color = "unset" 
   console.log("Weather", weather)
-  displayTheImage(iconName)
+  // displayTheImage(iconName)
+  displayImage(iconName)
 }
 updateTheDom()
 
-async function displayTheImage(iconName) {
-  console.log("iconName: ", iconName)
-  const apiKey = "Qy82l9OjjuIxsph5pxFVZoQiyfTumIFb";
-  const url = "https://api.giphy.com/v1/gifs/search?api_key=";
-  const response = await fetch(`${url}${apiKey}&q=${iconName}`,
-    {mode: 'cors'}
-  );
-  
-  const data = await response.json();
+function displayImage(iconName) {
+  const imageSrc = `/assets/icons/${iconName}.png` 
   const image = document.querySelector(".weatherImage");
-  if(data.data.length > 0) {
-    image.src =data.data[0].images.original.url
-    image.onload = () => (
-      console.log("Image loaded succesfully")
-    )
-    image.onError = () => {
-      console.log("Error loading image")
-    }
-  }else {
-    console.log("no Image has been found")
-  }
+  image.src = imageSrc
 }
+
+
+
+// async function displayTheImage(iconName) {
+//   console.log("iconName: ", iconName)
+//   const apiKey = "Qy82l9OjjuIxsph5pxFVZoQiyfTumIFb";
+//   const url = "https://api.giphy.com/v1/gifs/search?api_key=";
+//   const response = await fetch(`${url}${apiKey}&q=${iconName}`,
+//     {mode: 'cors'}
+//   );
+  
+//   const data = await response.json();
+//   const image = document.querySelector(".weatherImage");
+//   if(data.data.length > 0) {
+//     image.src =data.data[0].images.original.url
+//     image.onload = () => (
+//       console.log("Image loaded succesfully")
+//     )
+//     image.onError = () => {
+//       console.log("Error loading image")
+//     }
+//   }else {
+//     console.log("no Image has been found")
+//   }
+// }
