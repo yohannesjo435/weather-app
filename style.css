@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100dvh;
+  width: 100dvw;
+  padding: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+main {
+  border: 1px solid black;
+  height: 80%;  
+  width: 80%;
+  min-height: 250px;
+  margin: 0 auto;
+}
+.leftSide {
+  height: 100%;
+  max-height: 350px;
+  width: 100%;
+  user-select: none;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  main {
+    height: 100%;  
+    width: 100%;
+    overflow-x: hidden;/*in apporpiare but not focusing on the ui  */
+  }
+}
+.leftSide header{
+  font-size: 1.7rem;
+  font-weight: 500;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  outline: auto;
+}
+.address {
+  margin-top: 30px;
+}
+.leftSide header input {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  background-color: none;
+  border-radius: 30px;
+  padding: 10px;
+  border: 1px solid gray ;
+}
+
+.weather-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.weather-info-wrapper .col1{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
+  position: relative;
+}
+.weatherDegreeWrapper h1 {
+  font-size: 7rem;
+}
+.weather-info-wrapper .col1 .weatherDegreeWrapper span{
+  position: absolute;
+  top: -24%;
+  right: -15%;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.weather-info-wrapper .col2{
+  border: 1px solid gray;
+  margin: 10px 30px 0;
+}
+.SearchBtn {
+  width: 80px;
+  padding: 5px;
+  background-color: transparent;
+  border: 1px solid grey;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.SearchBtn:hover {
+  background-color: black;
+  color: white;
+}
+.weatherImage {
+  width: 100px;
+  height: 50px;
+}

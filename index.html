@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+
+  <main>
+    <div class="leftSide">
+      
+      <header>
+        <div class="logo">Weather Fast</div>
+        
+        <div style="gap: -5px">
+          <input type="text" class="userSearch" placeholder="Search For a city" value="Addis Ababa">
+          <button class="SearchBtn" onclick="updateTheDom()">Search</button>
+        </div>
+      </header>
+      
+      <h2 class="address"></h2>
+      <img src="" class="weatherImage">
+      
+      <div class="weather-info-wrapper">
+        <div class="col1">
+          <div class="weatherDegreeWrapper">
+            <h1 class="weatherDegree">
+              20
+            </h1>
+            <span>o</span>
+          </div>
+          <h2 class="weatherCondition">Cloudy</h2>
+        </div>
+
+        <div class="col2">
+          <h3 class="windSpeed">
+            6.1 mph
+          </h3>
+          <h3 class="humidity">
+            90 %
+          </h3>
+        </div>
+      </div>
+
+      
+
+
+    </div>
+
+    <!-- <div class="rightSide">
+
+    </div> -->
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
