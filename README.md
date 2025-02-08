@@ -22,3 +22,4 @@ This is a simple weather application created for practice purposes. The applicat
 ### Installation
 1. Clone the repository:
    git clone https://github.com/yohannesjo435/weather-app.git
+   https://yohannesjo435.github.io/weather-app/
