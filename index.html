@@ -14,9 +14,14 @@
       <header>
         <div class="logo">Weather Fast</div>
         
-        <div style="gap: -5px">
+        <div class="headerLeftWrapper" style="gap: -5px">
           <input type="text" class="userSearch" placeholder="Search For a city" value="Addis Ababa">
-          <button class="SearchBtn" onclick="updateTheDom()">Search</button>
+          <button class="SearchBtn" onclick="updateTheDom()">
+            Search
+          </button>
+          <div class="search-result">
+
+          </div>
         </div>
       </header>
       
@@ -55,6 +60,6 @@
   </main>
 
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

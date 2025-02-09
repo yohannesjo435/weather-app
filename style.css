@@ -13,23 +13,21 @@ main {
   border: 1px solid black;
   height: 80%;  
   width: 80%;
-  min-height: 250px;
+  min-height: 300px;
   margin: 0 auto;
+  overflow-x: hidden;/*in apporpiare but not focusing on the ui  */
 }
 .leftSide {
-  height: 100%;
-  max-height: 350px;
+  height: max-content;
+  overflow-y: hidden;
+  max-height: max-content;
   width: 100%;
   user-select: none;
   text-align: center;
+  /* padding: 100px; */
+  /* background-color: aqua; */
 }
-@media (max-width: 900px) {
-  main {
-    height: 100%;  
-    width: 100%;
-    overflow-x: hidden;/*in apporpiare but not focusing on the ui  */
-  }
-}
+
 .leftSide header{
   font-size: 1.7rem;
   font-weight: 500;
@@ -58,6 +56,8 @@ main {
   justify-content: center;
   height: 100%;
   width: 100%;
+  margin-top: 40px;
+  /* background-color: rebeccapurple; */
 }
 .weather-info-wrapper .col1{
 
@@ -97,4 +97,66 @@ main {
 .weatherImage {
   width: 100px;
   height: 100px;
+}
+.headerLeftWrapper{
+  position: relative;
+}
+.search-result {
+  width: 200px;
+  border: 1px solid #3333333d;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  background-color: rgba(240, 248, 255, 0.63);
+  border-radius: 10px;
+  transition: 0.5s ease-in;
+
+}
+.search-result ul {
+  font-size: 18px;
+  list-style: none;
+  padding: 5px 20px;
+  width: 100%;
+  max-height: 200px;  
+  overflow-y: scroll;
+}
+.search-result ul li{
+  padding: 10px 0px;
+  border-bottom: 1px solid #33333344;
+
+}
+.search-result ul li:last-child{
+  border-bottom: none;
+}
+.search-result ul li:hover{
+  background-color: rgba(173, 216, 230, 0.226);
+}
+@media (max-width: 900px) {
+  body{
+    padding: 10px;
+
+  }
+  .leftSide header{
+    font-size: 1.3rem;
+    padding: 10px;
+    justify-content: space-between;
+
+    flex-wrap: nowrap;
+    outline: auto;
+  }
+  .leftSide header input {
+    width: 150px;
+  }
+  main {
+    height: 100%;  
+    width: 100%;
+    overflow-x: hidden;/*in apporpiare but not focusing on the ui  */
+  }
+  .weatherDegreeWrapper h1 {
+    font-size: 4rem;
+  }
+  .weather-info-wrapper .col2{
+    border: 1px solid gray;
+    margin: 10px 40px 0;
+  }
 }
