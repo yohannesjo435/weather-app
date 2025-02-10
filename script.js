@@ -91,7 +91,7 @@ window.updateTheInputField = updateTheInputField;
 
 function displaySearchRec(result) {
   let resultHtml = result.map((value) => {
-    return `<li onclick="updateTheInputField('${value}')">${value}</li>`;
+    return `<li onclick="updateTheInputField('${value}')" onclick="updateTheDom()">${value}</li>`;
   });
 
   searchResult.innerHTML = `<ul>${resultHtml.join("")}</ul>`;
