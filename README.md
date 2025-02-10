@@ -1,7 +1,7 @@
 # Weather App (No fancy UI)
 
 ## Overview
-This is a simple weather application created for practice purposes. The application fetches weather data from an external API and displays it in the console. It is designed to demonstrate the fundamentals of making API requests and handling JSON data in a programming environment.
+This is a simple weather application created for practice purposes. The application fetches weather data from an external API and displays it in the DOM. It is designed to demonstrate the fundamentals of making API requests and handling JSON data in a programming environment.
 
 ## Features
 - Fetches current weather data based on a user's input location.
@@ -9,7 +9,7 @@ This is a simple weather application created for practice purposes. The applicat
 - Uses an external weather API for data retrieval.
 
 ## Technologies Used
-- JavaScript (or any programming language of your choice)
+- JavaScript
 - Fetch API (for making HTTP requests)
 - JSON (for data handling)
 
